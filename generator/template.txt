@@ -1,0 +1,41 @@
+import platform
+
+in_fn = input
+op_fn = print
+
+input_file = platform.node() and platform.node().startswith("LAPTOP-")
+if input_file:
+    filename = "zzz.zzz"
+    f = open(filename, "r")
+    in_fn = f.readline
+
+
+    def check_file(args):
+        exp = f.readline().strip()
+        if str(args) == exp:
+            print("Pass")
+        else:
+            print("Fail. Expected:", exp, "Got", args)
+
+
+    op_fn = check_file
+
+
+def read_str() -> str:
+    return in_fn()
+
+
+def read_int() -> int:
+    return int(in_fn())
+
+
+def read_str_arr(sep=" ") -> list[str]:
+    return in_fn().split(sep)
+
+
+def read_int_arr(sep=" ") -> list[int]:
+    return list(map(int, in_fn().split(sep)))
+
+
+num_tests = read_int()
+op_fn("")
