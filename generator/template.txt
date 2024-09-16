@@ -37,5 +37,13 @@ def read_int_arr(sep=" ") -> list[int]:
     return list(map(int, in_fn().strip().split(sep)))
 
 
+def read_2D_int_arr(num_rows, sep=" ") -> list[list[int]]:
+    return [list(map(int, input().strip().split())) for _ in range(num_rows)]
+
+
+def read_2D_str_arr(num_rows, sep=" ") -> list[list[str]]:
+    return [input().strip().split() for _ in range(num_rows)]
+
+
 num_tests = read_int()
 op_fn("")
