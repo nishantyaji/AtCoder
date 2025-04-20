@@ -1,4 +1,4 @@
-# https://atcoder.jp/contests/dp/tasks/dp_b
+# https://atcoder.jp/contests/dp/tasks/dp_d
 
 in_fn = input
 op_fn = print
